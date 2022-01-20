@@ -29,8 +29,7 @@ export default function App() {
   const useStyles = makeStyles(() => ({
     ul: {
       "& .MuiPaginationItem-root": {
-        color: dark ? "#1F2937" : "white",
-        fontSize: "1.5rem"
+        color: dark ? "#1F2937" : "white"
       }
     }
   }));
@@ -100,12 +99,13 @@ export default function App() {
               return (
                 <Skeleton
                   style={
-                    dark ? { background: "white" } : { background: "white" }
+                    dark ? { background: "#f8f8ff" } : { background: "#1F2937" }
                   }
                   variant="rectangle"
-                >
-                  <Card />
-                </Skeleton>
+                  width={304}
+                  height={716}
+                  className="rounded-xl"
+                ></Skeleton>
               );
             })
           : returnedMovies
